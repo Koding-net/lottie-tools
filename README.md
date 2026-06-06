@@ -12,25 +12,25 @@ All tools are extracted from [IconKing](https://iconking.net) — a Lottie anima
 
 | Package | Description | Live tool |
 |---|---|---|
-| [@kodeking/lottie-to-svg](https://github.com/Koding-net/lottie-to-svg) | Extract SVG frames from a Lottie animation | [iconking.net/tools/lottie-to-svg](https://iconking.net/tools/lottie-to-svg) |
-| [@kodeking/svg-to-lottie](https://github.com/Koding-net/svg-to-lottie) | Wrap an SVG file as a Lottie JSON animation | [iconking.net/tools/svg-to-lottie](https://iconking.net/tools/svg-to-lottie) |
-| [@kodeking/lottie-to-dotlottie](https://github.com/Koding-net/lottie-to-dotlottie) | Convert Lottie JSON to .lottie binary format | [iconking.net/tools/lottie-json-to-dotlottie](https://iconking.net/tools/lottie-json-to-dotlottie) |
+| [@koding-net/lottie-to-svg](https://github.com/Koding-net/lottie-to-svg) | Extract SVG frames from a Lottie animation | [iconking.net/tools/lottie-to-svg](https://iconking.net/tools/lottie-to-svg) |
+| [@koding-net/svg-to-lottie](https://github.com/Koding-net/svg-to-lottie) | Wrap an SVG file as a Lottie JSON animation | [iconking.net/tools/svg-to-lottie](https://iconking.net/tools/svg-to-lottie) |
+| [@koding-net/lottie-to-dotlottie](https://github.com/Koding-net/lottie-to-dotlottie) | Convert Lottie JSON to .lottie binary format | [iconking.net/tools/lottie-json-to-dotlottie](https://iconking.net/tools/lottie-json-to-dotlottie) |
 
 ### Node.js (server-side) — requires ffmpeg / gifski
 
 | Package | Description | Live tool |
 |---|---|---|
-| [@kodeking/lottie-to-gif](https://github.com/Koding-net/lottie-to-gif) | Render Lottie to animated GIF (gifski or ffmpeg) | [iconking.net/tools/lottie-to-gif](https://iconking.net/tools/lottie-to-gif) |
-| [@kodeking/lottie-to-mp4](https://github.com/Koding-net/lottie-to-mp4) | Render Lottie to MP4 video (H.264) | [iconking.net/tools/lottie-to-mp4](https://iconking.net/tools/lottie-to-mp4) |
-| [@kodeking/lottie-to-webm](https://github.com/Koding-net/lottie-to-webm) | Render Lottie to WebM (VP9 with transparency) | [iconking.net/tools/lottie-to-webm](https://iconking.net/tools/lottie-to-webm) |
-| [@kodeking/lottie-to-webp](https://github.com/Koding-net/lottie-to-webp) | Render Lottie to animated WebP | [iconking.net/tools/lottie-to-webp](https://iconking.net/tools/lottie-to-webp) |
-| [@kodeking/lottie-to-apng](https://github.com/Koding-net/lottie-to-apng) | Render Lottie to animated PNG (APNG) | [iconking.net/tools/lottie-to-apng](https://iconking.net/tools/lottie-to-apng) |
+| [@koding-net/lottie-to-gif](https://github.com/Koding-net/lottie-to-gif) | Render Lottie to animated GIF (gifski or ffmpeg) | [iconking.net/tools/lottie-to-gif](https://iconking.net/tools/lottie-to-gif) |
+| [@koding-net/lottie-to-mp4](https://github.com/Koding-net/lottie-to-mp4) | Render Lottie to MP4 video (H.264) | [iconking.net/tools/lottie-to-mp4](https://iconking.net/tools/lottie-to-mp4) |
+| [@koding-net/lottie-to-webm](https://github.com/Koding-net/lottie-to-webm) | Render Lottie to WebM (VP9 with transparency) | [iconking.net/tools/lottie-to-webm](https://iconking.net/tools/lottie-to-webm) |
+| [@koding-net/lottie-to-webp](https://github.com/Koding-net/lottie-to-webp) | Render Lottie to animated WebP | [iconking.net/tools/lottie-to-webp](https://iconking.net/tools/lottie-to-webp) |
+| [@koding-net/lottie-to-apng](https://github.com/Koding-net/lottie-to-apng) | Render Lottie to animated PNG (APNG) | [iconking.net/tools/lottie-to-apng](https://iconking.net/tools/lottie-to-apng) |
 
 ### Python + Node.js wrapper
 
 | Package | Description | Live tool |
 |---|---|---|
-| [@kodeking/ai-to-svg](https://github.com/Koding-net/ai-to-svg) | Convert Adobe Illustrator (.ai) files to SVG (MuPDF) | [iconking.net/tools/ai-to-svg](https://iconking.net/tools/ai-to-svg) |
+| [@koding-net/ai-to-svg](https://github.com/Koding-net/ai-to-svg) | Convert Adobe Illustrator (.ai) files to SVG (MuPDF) | [iconking.net/tools/ai-to-svg](https://iconking.net/tools/ai-to-svg) |
 
 ---
 
@@ -39,11 +39,11 @@ All tools are extracted from [IconKing](https://iconking.net) — a Lottie anima
 ### Browser packages
 
 ```bash
-npm install @kodeking/lottie-to-svg lottie-web
+npm install @koding-net/lottie-to-svg lottie-web
 ```
 
 ```ts
-import { extractSvgFrame } from '@kodeking/lottie-to-svg';
+import { extractSvgFrame } from '@koding-net/lottie-to-svg';
 
 const json = await fetch('/animation.json').then(r => r.json());
 const svg  = await extractSvgFrame(json, { frame: 0 });
@@ -57,7 +57,7 @@ document.body.innerHTML = svg;
 brew install ffmpeg gifski   # macOS
 # or: apt install ffmpeg (Ubuntu)
 
-npm install -g @kodeking/lottie-to-gif
+npm install -g @koding-net/lottie-to-gif
 lottie-to-gif animation.json animation.gif --fps 15 --width 480
 ```
 
@@ -65,7 +65,7 @@ lottie-to-gif animation.json animation.gif --fps 15 --width 480
 
 ```bash
 pip3 install pymupdf
-npm install -g @kodeking/ai-to-svg
+npm install -g @koding-net/ai-to-svg
 ai-to-svg logo.ai logo.svg
 ```
 
